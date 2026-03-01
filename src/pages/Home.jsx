@@ -6,9 +6,12 @@ import CountUp from '../components/CountUp';
 import heroImage from '../assets/hero-woman.png';
 import avatar1 from '../assets/man.jpg';
 import boxImage from '../assets/security-visual.png';
+import InvestmentPlans from '../components/InvestmentPlans';
 
 import { stockTickerData, etfCategories, stockListings } from '../data/mockData';
 import GlobalAvailabilityPopup from '../components/GlobalAvailabilityPopup';
+
+import ActivitiesToday from '../components/ActivitiesToday';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -21,6 +24,8 @@ const Home = () => {
             navigate('/signup');
         }
     };
+    // ... (existing code)
+
     const [activeSecurityTab, setActiveSecurityTab] = useState('Data Encryption');
 
     const securityTabs = [
@@ -103,7 +108,6 @@ const Home = () => {
                 "locale": "en",
                 "largeChartUrl": "",
                 "isTransparent": false,
-                "showSymbolLogo": false,
                 "showFloatingTooltip": false,
                 "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
                 "plotLineColorFalling": "rgba(41, 98, 255, 1)",
@@ -665,6 +669,13 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Investment Plans Section */}
+            <InvestmentPlans />
+
+            {/* Activities Today Section */}
+            <ActivitiesToday />
+
             {/* Testimonials Section */}
             <section className="testimonials-section">
                 <div className="section-header-top">

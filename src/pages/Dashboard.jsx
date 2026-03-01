@@ -91,7 +91,7 @@ const Dashboard = () => {
                 "countryFilter": "ar,au,br,ca,cn,fr,de,in,id,it,jp,kr,mx,ru,sa,za,tr,gb,us,eu",
                 "importanceFilter": "-1,0,1",
                 "width": "100%",
-                "height": 550
+                "height": "550"
             });
             container.appendChild(script);
         }
@@ -339,8 +339,8 @@ const Dashboard = () => {
 
             {/* Widget Sections from Home Page */}
             {homeSections.map((section, index) => (
-                <div key={index} className="etf-section" style={{ display: 'flex', gap: '2rem', alignItems: 'center', marginTop: '4rem', marginBottom: '4rem' }}>
-                    <div className="etf-header" style={{ flex: '0 0 30%', textAlign: 'left' }}>
+                <div key={index} className="etf-section dashboard-widget-row">
+                    <div className="etf-header dashboard-widget-info">
                         <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1e293b' }}>{section.title}</h2>
                         <p style={{ color: '#64748b', lineHeight: '1.6', marginBottom: '1.5rem' }}>{section.description}</p>
                         <button
@@ -361,7 +361,7 @@ const Dashboard = () => {
                             Invest <span>→</span>
                         </button>
                     </div>
-                    <div className="etf-list" style={{ flex: '1', display: 'block', height: '550px', border: 'none', boxShadow: 'none', background: 'transparent' }}>
+                    <div className="etf-list dashboard-widget-chart">
                         <div className="tradingview-widget-container" id={section.id} style={{ width: '100%', height: '100%' }}></div>
                     </div>
                 </div>

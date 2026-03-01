@@ -28,6 +28,8 @@ import Profile from './pages/Profile';
 import ForgotPassword from './pages/ForgotPassword';
 import ResetPassword from './pages/ResetPassword';
 import AdminLogin from './pages/AdminLogin';
+import InvestmentOffers from './pages/InvestmentOffers';
+import LiveInvestorToast from './components/LiveInvestorToast';
 
 import { AuthProvider } from './context/AuthContext';
 
@@ -38,6 +40,7 @@ const MainLayout = () => {
             <NavWrapper />
             <Outlet />
             <FooterWrapper />
+            <LiveInvestorToast />
         </>
     );
 };
@@ -54,6 +57,7 @@ function App() {
                             <Route path="about" element={<About />} />
                             <Route path="compliance" element={<Compliance />} />
                             <Route path="contact" element={<Contact />} />
+                            <Route path="investment-offers" element={<InvestmentOffers />} />
 
                             <Route path="login" element={<Login />} />
                             <Route path="signup" element={<Signup />} />

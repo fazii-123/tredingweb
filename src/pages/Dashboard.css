@@ -50,7 +50,8 @@
 
 .assets-title {
     font-size: 1.5rem;
-    color: #3b82f6; /* Blue as per image */
+    color: #3b82f6;
+    /* Blue as per image */
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
@@ -345,8 +346,15 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .dropdown-header {
@@ -582,7 +590,8 @@
 /* Tablet (Landscape) & Small Laptops */
 @media (max-width: 1024px) {
     .dashboard-sidebar {
-        width: 240px; /* Slimmer sidebar */
+        width: 240px;
+        /* Slimmer sidebar */
     }
 
     .dashboard-main {
@@ -598,20 +607,23 @@
 /* Mobile Devices (Standard) */
 @media (max-width: 768px) {
     .dashboard-sidebar {
-        display: none; /* Hide sidebar completely */
+        display: none;
+        /* Hide sidebar completely */
     }
 
     .dashboard-main {
         margin-left: 0;
         padding: 1rem;
-        padding-bottom: 90px; /* Space for bottom nav */
+        padding-bottom: 90px;
+        /* Space for bottom nav */
         width: 100%;
     }
 
     .dashboard-header {
         left: 0;
         width: 100%;
-        margin-right: -1rem; /* Compensate padding */
+        margin-right: -1rem;
+        /* Compensate padding */
         margin-left: -1rem;
         border-radius: 0;
         position: sticky;
@@ -620,7 +632,8 @@
 
     /* Grid Adjustments */
     .action-buttons {
-        grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 Columns */
     }
 
     .assets-stats-row {
@@ -633,7 +646,8 @@
 /* Small Mobile (Phones) */
 @media (max-width: 480px) {
     .action-buttons {
-        grid-template-columns: 1fr; /* Stack vertically for easy tapping */
+        grid-template-columns: 1fr;
+        /* Stack vertically for easy tapping */
     }
 
     .assets-title {
@@ -650,13 +664,15 @@
     }
 
     .nav-item span {
-        font-size: 0.7rem; /* Smaller text */
+        font-size: 0.7rem;
+        /* Smaller text */
     }
 }
 
 /* Bottom Navigation Bar (Mobile Only) */
 .bottom-nav {
-    display: none; /* Hidden by default on Desktop */
+    display: none;
+    /* Hidden by default on Desktop */
     position: fixed;
     bottom: 0;
     left: 0;
@@ -664,7 +680,8 @@
     background: #fff;
     border-top: 1px solid #e2e8f0;
     padding: 0.5rem 1rem;
-    justify-content: space-around; /* Better spacing */
+    justify-content: space-around;
+    /* Better spacing */
     align-items: center;
     z-index: 1000;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
@@ -720,6 +737,16 @@
 }
 
 .etf-list {
-    background: transparent !important;
-    border: none !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+/* Make the TradingView iframe inside fill the card */
+.etf-list .tradingview-widget-container,
+.etf-list .tradingview-widget-container__widget {
+    width: 100% !important;
+    height: 100% !important;
 }
